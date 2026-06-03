@@ -17,9 +17,9 @@ type PostsRequestBuilder struct {
 // PostsRequestBuilderGetQueryParameters get posts
 type PostsRequestBuilderGetQueryParameters struct {
     // Filter results by title
-    Title *string `uriparametername:"title"`
+    Title *string "uriparametername:\"title\""
     // Filter results by user ID
-    UserId *int32 `uriparametername:"userId"`
+    UserId *int32 "uriparametername:\"userId\""
 }
 // PostsRequestBuilderGetRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
 type PostsRequestBuilderGetRequestConfiguration struct {
@@ -63,7 +63,7 @@ func (m *PostsRequestBuilder) ByPostIdInteger(postId int32)(*PostItemRequestBuil
 // NewPostsRequestBuilderInternal instantiates a new PostsRequestBuilder and sets the default values.
 func NewPostsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*PostsRequestBuilder) {
     m := &PostsRequestBuilder{
-        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/posts{?title*,userId*}", pathParameters),
+        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "", pathParameters),
     }
     return m
 }
