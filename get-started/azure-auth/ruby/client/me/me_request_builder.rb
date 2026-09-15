@@ -6,9 +6,8 @@ require_relative './me'
 module GetUser
     module Me
         ## 
-        # Builds and executes requests for operations under \me
+        # Builds and executes requests for operations under #me
         class MeRequestBuilder < MicrosoftKiotaAbstractions::BaseRequestBuilder
-            
             ## 
             ## Instantiates a new MeRequestBuilder and sets the default values.
             ## @param path_parameters Path parameters for the request
